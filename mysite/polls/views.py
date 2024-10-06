@@ -41,6 +41,7 @@ from django.urls import reverse
 from django.views import generic
 
 from .models import Choice, Question
+import os
 
 
 class IndexView(generic.ListView):
@@ -62,6 +63,12 @@ class ResultsView(generic.DetailView):
     template_name = 'polls/results.html'
 
 
+def map_view(request):
+    return render(request, 'polls/map.html', {
+        'mapbox_access_token': os.environ.get('MAPBOX_ACCESS_TOKEN')
+    })
+
+
 def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     try:
@@ -78,4 +85,4 @@ def vote(request, question_id):
         # Always return an HttpResponseRedirect after successfully dealing
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
-        return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
+        return HttpResponseRedirect(reverse('polls:results', args=(question.id)))

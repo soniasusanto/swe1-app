@@ -3,6 +3,7 @@ from polls.models import Question
 from django.utils import timezone
 
 test_var=None
+test_var_two=None
 
 class Command(BaseCommand):
     help = 'Creates a poll.'

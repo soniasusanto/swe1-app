@@ -12,8 +12,6 @@ env:
 before_script:
   - black --check .
   - flake8 --max-line-length=88 --ignore=E501
-  - python mysite/manage.py migrate
-  - python mysite/manage.py collectstatic --noinput
 script:
   - coverage run --source='.' manage.py test
   - coverage report

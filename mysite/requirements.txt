@@ -1,7 +1,7 @@
 asgiref==3.8.1
 Django==4.2.16
 django-environ==0.11.2
-psycopg2-binary==2.9.3
+psycopg2-binary==2.8.5
 pytz==2024.2
 setuptools==75.1.0
 sqlparse==0.5.1

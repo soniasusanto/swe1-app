@@ -9,6 +9,7 @@ env:
     - AWS_DEFAULT_REGION="us-east-1"
     - EB_APP_NAME="swe1-app"
     - EB_ENV_NAME="swe1-app-dev"
+    - COVERALLS_REPO_TOKEN: $COVERALLS_REPO_TOKEN
 before_script:
   - black --check .
   - flake8 --max-line-length=88 --ignore=E501

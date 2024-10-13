@@ -13,7 +13,7 @@ before_script:
   - black --check .
   - flake8 --max-line-length=88 --ignore=E501
 script:
-  - coverage run --source='.' manage.py test
+  - coverage run --source='.' mysite/manage.py test
   - coverage report
 deploy:
   provider: elasticbeanstalk
@@ -27,4 +27,4 @@ deploy:
     branch: main
 
 after_success:
-  - coveralls --service=travis-ci
+  - coveralls

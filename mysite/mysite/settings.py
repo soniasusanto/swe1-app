@@ -34,7 +34,7 @@ DEBUG =env('DEBUG')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
-ALLOWED_HOSTS = ['polls.us-east-1.elasticbeanstalk.com', 'localhost', '127.0.0.1', '172.31.4.157']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 

@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from polls.models import Choice, Question
+from polls.models import Question
 from django.utils import timezone
 
 

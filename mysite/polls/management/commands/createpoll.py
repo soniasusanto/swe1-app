@@ -2,9 +2,10 @@ from django.core.management.base import BaseCommand
 from polls.models import Question
 from django.utils import timezone
 
+test_var=None
 
 class Command(BaseCommand):
-    help = "Creates a poll."
+    help = 'Creates a poll.'
 
     def handle(self, *args, **options):
         if not Question.objects.filter(question_text__startswith="What").exists():
